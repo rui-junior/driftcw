@@ -243,7 +243,7 @@ export default function DriftMap({ params }: DriftMapProps) {
       </Box>
 
       {/* Informações da simulação */}
-      <Box position="absolute" top={4} right={4} zIndex={1000} minW="250px" bg="white" p={4} borderRadius="lg" shadow="lg">
+      <Flex display={['none', 'none', 'flex', 'flex', 'flex']} position="absolute" top={4} right={4} zIndex={1000} minW="250px" bg="white" p={4} borderRadius="lg" shadow="lg">
         <Box fontSize="sm">
           <Heading size="sm" color="blue.600" mb={2}>📊 Parâmetros</Heading>
           <Text mb={1}><strong>LKP:</strong> {params.lkp.lat.toFixed(4)}, {params.lkp.lng.toFixed(4)}</Text>
@@ -252,7 +252,7 @@ export default function DriftMap({ params }: DriftMapProps) {
           <Text mb={1}><strong>Leeway:</strong> {(params.objectType.leeway * 100).toFixed(1)}%</Text>
           <Text><strong>Duração:</strong> {params.duration}h</Text>
         </Box>
-      </Box>
+      </Flex>
 
       {/* Mapa */}
       <MapContainer
