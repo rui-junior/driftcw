@@ -1,16 +1,8 @@
 "use client";
 
-import { Flex, Image, Button, Text } from "@chakra-ui/react";
-import { auth } from "../../../firebase/firebase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useState, useEffect } from "react"; // 👈 Import useEffect
-import { useRouter } from "next/navigation"; // 👈 Import useRouter
+import { Flex, Image } from "@chakra-ui/react";
 
 export default function Login() {
-  const router = useRouter(); // 👈 Initialize useRouter
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
 
   return (
     <Flex
